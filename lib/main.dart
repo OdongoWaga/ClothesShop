@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'components/horizontal_lv.dart';
 
 void main() {
   runApp(
@@ -18,7 +19,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = Container(
+    Widget imageCarousel = Container(
       height: 200,
       child: Carousel(
         boxFit: BoxFit.cover,
@@ -136,7 +137,14 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: ListView(
-        children: <Widget>[image_carousel],
+        children: <Widget>[
+          imageCarousel,
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Categories'),
+          ),
+          HorizontalList()
+        ],
       ),
     );
   }
