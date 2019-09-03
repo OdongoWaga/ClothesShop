@@ -85,7 +85,25 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Size'),
+                          content: Text('Choose Size'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text('close'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -103,7 +121,25 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Color'),
+                          content: Text('Choose Color'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text('close'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -121,7 +157,25 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Qty'),
+                          content: Text('Choose Quantity'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text('close'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -165,7 +219,59 @@ class _ProductDetailsState extends State<ProductDetails> {
                 onPressed: () {},
               ),
             ],
-          )
+          ),
+          Divider(color: Colors.red),
+          ListTile(
+            title: Text("Product Detail"),
+            subtitle: Text(
+                "TTacos listicle pop-up synth occupy, franzen before they sold out disrupt DIY cardigan. Jianbing craft beer mixtape pitchfork plaid. DIY man bun meditation, air plant 3 wolf moon hammock hella neutra polaroid pour-over marfa. 3 wolf moon waistcoat celiac, church-key everyday carry umami heirloom ugh."),
+          ),
+          Divider(color: Colors.red),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Name',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text(widget.productDetailName),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Brand',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("Brand X"),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Condition',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("New"),
+              ),
+            ],
+          ),
         ],
       ),
     );
