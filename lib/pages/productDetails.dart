@@ -23,7 +23,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.red,
-        title: Text('Haute'),
+        title: InkWell(onTap: () {}, child: Text('Haute')),
         actions: <Widget>[
           IconButton(
             icon: Icon(

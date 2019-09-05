@@ -20,6 +20,30 @@ class _ProductsState extends State<Products> {
       'oldPrice': 120,
       'price': 70
     },
+    {
+      'name': 'Red Dress',
+      'picture': 'images/products/hills1.jpeg',
+      'oldPrice': 120,
+      'price': 70
+    },
+    {
+      'name': 'Red Dress',
+      'picture': 'images/products/skt1.jpeg',
+      'oldPrice': 120,
+      'price': 70
+    },
+    {
+      'name': 'Red Dress',
+      'picture': 'images/products/skt2.jpeg',
+      'oldPrice': 120,
+      'price': 70
+    },
+    {
+      'name': 'Red Dress',
+      'picture': 'images/products/dress2.jpeg',
+      'oldPrice': 120,
+      'price': 70
+    },
   ];
 
   @override
@@ -56,7 +80,7 @@ class SingleProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
-        tag: productName,
+        tag: Text("hero 1"),
         child: Material(
           child: InkWell(
             onTap: () => Navigator.of(context).push(
@@ -76,23 +100,21 @@ class SingleProduct extends StatelessWidget {
               ),
               footer: Container(
                 color: Colors.white70,
-                child: ListTile(
-                  leading: Text(
-                    productName,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    "\$$productPrice",
-                    style: TextStyle(
-                        color: Colors.red, fontWeight: FontWeight.w800),
-                  ),
-                  subtitle: Text(
-                    "\$$productOldPrice",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w800,
-                        decoration: TextDecoration.lineThrough),
-                  ),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        productName,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16.0),
+                      ),
+                    ),
+                    Text(
+                      '\$${productPrice}',
+                      style: TextStyle(
+                          color: Colors.red, fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
             ),
