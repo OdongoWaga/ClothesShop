@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'components/horizontal_lv.dart';
 import 'components/products.dart';
+import 'package:clothesshop/pages/cart.dart';
 
 void main() {
   runApp(
@@ -58,7 +59,9 @@ class _HomePageState extends State<HomePage> {
               Icons.shopping_cart,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push
+            },
           )
         ],
       ),
