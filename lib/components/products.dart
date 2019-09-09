@@ -21,7 +21,7 @@ class _ProductsState extends State<Products> {
       'price': 70
     },
     {
-      'name': 'Red Dress',
+      'name': 'Heels',
       'picture': 'images/products/hills1.jpeg',
       'oldPrice': 120,
       'price': 70
