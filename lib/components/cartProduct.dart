@@ -64,8 +64,8 @@ class SingleCartProduct extends StatelessWidget {
       child: ListTile(
         leading: Image.asset(
           cartProductPicture,
-          width: 100,
-          height: 100,
+          width: 80.0,
+          height: 80.0,
         ),
         title: Text(cartProductName),
         subtitle: Column(
@@ -73,8 +73,8 @@ class SingleCartProduct extends StatelessWidget {
             Row(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.all(0.0),
-                  child: Text("Size: "),
+                  padding: EdgeInsets.all(00.0),
+                  child: Text("Size:"),
                 ),
                 Padding(
                   padding: EdgeInsets.all(4.0),
@@ -99,10 +99,22 @@ class SingleCartProduct extends StatelessWidget {
                 child: Text(
                   "\$${cartProductPrice}",
                   style: TextStyle(
-                      fontSize: 16.0,
+                      fontSize: 17.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.red),
                 ))
+          ],
+        ),
+        trailing: Column(
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.arrow_drop_up),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.arrow_drop_down),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
