@@ -160,21 +160,23 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
           imageCarousel,
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Categories'),
+            padding: EdgeInsets.all(4.0),
+            child: Container(
+                alignment: Alignment.centerLeft, child: Text('Categories')),
           ),
           HorizontalList(),
           Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text('Recent Products'),
+            padding: EdgeInsets.all(4.0),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              child: Text('Recent Products'),
+            ),
           ),
-          Flexible(
-            child: Products(),
-          )
+          Flexible(child: Products()),
         ],
       ),
     );
