@@ -19,7 +19,7 @@ class _CartProductsState extends State<CartProducts> {
       'name': 'Shoes',
       'picture': 'images/products/hills1.jpeg',
       'price': 90,
-      "size": "7",
+      "size": "L",
       "color": "Black",
       "quantity": 1,
     },
@@ -33,10 +33,10 @@ class _CartProductsState extends State<CartProducts> {
           return SingleCartProduct(
             cartProductName: productsOnCart[index]['name'],
             cartProductColor: productsOnCart[index]['color'],
-            cartProductPicture: productsOnCart[index]['quantity'],
-            cartProductPrice: productsOnCart[index]['size'],
-            cartProductQty: productsOnCart[index]['price'],
-            cartProductSize: productsOnCart[index]['picture'],
+            cartProductPicture: productsOnCart[index]['picture'],
+            cartProductPrice: productsOnCart[index]['price'],
+            cartProductQty: productsOnCart[index]['quantity'],
+            cartProductSize: productsOnCart[index]['size'],
           );
         });
   }
@@ -62,19 +62,47 @@ class SingleCartProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        leading: Image.asset(
+          cartProductPicture,
+          width: 100,
+          height: 100,
+        ),
         title: Text(cartProductName),
         subtitle: Column(
           children: <Widget>[
             Row(
               children: <Widget>[
-                Expanded(
-                  child: Text("Size"),
+                Padding(
+                  padding: EdgeInsets.all(0.0),
+                  child: Text("Size: "),
                 ),
-                Expanded(
-                  child: Text("Size"),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    cartProductSize,
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                  child: Text("Color:"),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(cartProductColor,
+                      style: TextStyle(color: Colors.red)),
                 ),
               ],
-            )
+            ),
+            Container(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "\$${cartProductPrice}",
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red),
+                ))
           ],
         ),
       ),
