@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "735132138292",
+    "firebase_url": "https://ecommerce-62b6a.firebaseio.com",
+    "project_id": "ecommerce-62b6a",
+    "storage_bucket": "ecommerce-62b6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735132138292:android:6d751c74d1887110c68361",
+        "android_client_info": {
+          "package_name": "ke.co.wagaodongo.clothesshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735132138292-vfp3u07umt9s16o987gi0m3rr0vusri0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ke.co.wagaodongo.clothesshop",
+            "certificate_hash": "1ecc3c960369e1b94cd3a30a849eac26248958c5"
+          }
+        },
+        {
+          "client_id": "735132138292-arue322u814ulsq0fngif9a0g009fe7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-3j_ckNuoLTRwrvtu4DQi4HRgwpoHzlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735132138292-arue322u814ulsq0fngif9a0g009fe7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
